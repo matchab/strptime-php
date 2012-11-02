@@ -1,7 +1,13 @@
 <?php
-#
-# strptime.php
-#
+/**
+ * 
+ * @todo Comment me
+ * 
+ * @license
+ * @author Mathieu Chabanon
+ * @link https://github.com/matchab/strptime-php
+ */
+
 if (!function_exists('strptime'))
 {
 
