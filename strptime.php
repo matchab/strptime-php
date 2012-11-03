@@ -98,11 +98,11 @@ if (!function_exists('strptime'))
 	function strptime($date,$format)
 	{
 		//Default return values
-		$tmSec  = 0;
-		$tmMin  = 0;
+		$tmSec = 0;
+		$tmMin = 0;
 		$tmHour = 0;
 		$tmMday = 1;
-		$tmMon  = 1;
+		$tmMon = 1;
 		$tmYear = 1900;
 		$tmWday = 0;
 		$tmYday = 0;
@@ -149,9 +149,9 @@ if (!function_exists('strptime'))
 						//Unsupported by strftime on Windows
 						if ($ret = _strptime_match($buffer,'\d{4}-\d{2}-\d{2}'))
 						{
-							$frags  = explode('-',$ret);
+							$frags = explode('-',$ret);
 							$tmYear = intval($frags[0]);
-							$tmMon  = intval($frags[1]);
+							$tmMon = intval($frags[1]);
 							$tmMday = intval($frags[2]);
 						}
 						break;
@@ -211,14 +211,14 @@ if (!function_exists('strptime'))
 		
 		//Return
 		$time = array();
-		$time['tm_sec']   = $tmSec;
-		$time['tm_min']   = $tmMin;
-		$time['tm_hour']  = $tmHour;
-		$time['tm_mday']  = $tmMday;
-		$time['tm_mon']   = ($tmMon-1); //0-11
-		$time['tm_year']  = ($tmYear-1900);
-		$time['tm_wday']  = $tmWday;
-		$time['tm_yday']  = $tmYday;
+		$time['tm_sec'] = $tmSec;
+		$time['tm_min'] = $tmMin;
+		$time['tm_hour'] = $tmHour;
+		$time['tm_mday'] = $tmMday;
+		$time['tm_mon'] = ($tmMon-1); //0-11
+		$time['tm_year'] = ($tmYear-1900);
+		$time['tm_wday'] = $tmWday;
+		$time['tm_yday'] = $tmYday;
 		$time['unparsed'] = $buffer; //Unparsed buffer
 		return $time;
 	}
